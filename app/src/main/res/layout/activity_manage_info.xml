@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginTop="100dp"
+    android:layout_marginHorizontal="10dp">
 
     <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView_manager"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="manager"
-        android:textSize="40dp"/>
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:text="▶ 카테고리 선택" />
 
     <Button
         android:id="@+id/add_sideeffect"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
         android:background="@color/main"
-        android:text="add vaccine"/>
+        android:text="백신 부작용 정보 추가"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/add_visitedrecord"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
         android:background="@color/main"
-        android:text="add visit"/>
+        android:text="확진자 방문 장소 정보 추가"
+        android:textColor="@color/white" />
 </LinearLayout>
