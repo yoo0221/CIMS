@@ -10,7 +10,6 @@ import android.widget.Button;
 import com.example.cims.HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity;
 import com.example.cims.HCI_layer.InformationManagement_UI.AddActivity;
 import com.example.cims.HCI_layer.Vaccine_UI.VaccineActivity;
-import com.example.cims.R;
 
 public class MainActivity extends AppCompatActivity {
 

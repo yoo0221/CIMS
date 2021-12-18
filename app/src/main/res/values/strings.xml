@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CIMS</string>
+    <string name="title_activity_confirmed_case">ConfirmedCaseActivity</string>
+    <string name="tab_text_1">Map View</string>
+    <string name="tab_text_2">Table View</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
