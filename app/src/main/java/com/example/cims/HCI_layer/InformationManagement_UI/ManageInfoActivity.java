@@ -7,16 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.cims.HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity;
-import com.example.cims.HCI_layer.Vaccine_UI.VaccineActivity;
 import com.example.cims.R;
 
-public class AddActivity extends AppCompatActivity {
+public class ManageInfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manager);
+        setContentView(R.layout.activity_manage_info);
 
         Button btn1 = (Button) findViewById(R.id.add_sideeffect);
         btn1.setOnClickListener(new View.OnClickListener() {

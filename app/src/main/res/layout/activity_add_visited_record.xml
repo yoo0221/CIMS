@@ -6,4 +6,197 @@
     android:layout_height="match_parent"
     tools:context=".HCI_layer.InformationManagement_UI.AddVisitedRecordActivity">
 
+    <TextView
+        android:id="@+id/addVisitedRecordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/addVisitedRecordTitle"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/placeNameText"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/placeNameText"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addVisitedRecordTitle" />
+
+    <TextView
+        android:id="@+id/visitedTimeText"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/visitedTimeText"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeNameText" />
+
+    <TextView
+        android:id="@+id/addressText"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/addressText"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitedTimeText" />
+
+    <TextView
+        android:id="@+id/latitudeText"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/latitudeText"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressText" />
+
+    <TextView
+        android:id="@+id/longitudeText"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/longitudeText"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeText" />
+
+    <EditText
+        android:id="@+id/placeNameInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:hint="@string/placeNameInputHint"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/placeNameText"
+        app:layout_constraintTop_toBottomOf="@+id/addVisitedRecordTitle" />
+
+    <EditText
+        android:id="@+id/visitedTimeInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:hint="@string/visitedTimeInputHint"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/visitedTimeText"
+        app:layout_constraintTop_toBottomOf="@+id/placeNameInput" />
+
+    <EditText
+        android:id="@+id/addressInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:hint="@string/addressInputHint"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/addressText"
+        app:layout_constraintTop_toBottomOf="@+id/visitedTimeInput" />
+
+    <EditText
+        android:id="@+id/latitudeInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/latitudeInputHint"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/latitudeText"
+        app:layout_constraintTop_toBottomOf="@+id/addressInput" />
+
+    <EditText
+        android:id="@+id/longitudeInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:hint="@string/longitudeInputHint"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/longitudeText"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeInput" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="194dp"
+        android:layout_height="55dp"
+        android:text="@string/btnCancelText"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="@string/btnAddText"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cancel_btn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

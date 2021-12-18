@@ -1,7 +1,38 @@
 <resources>
     <string name="app_name">CIMS</string>
+
     <string name="title_activity_confirmed_case">ConfirmedCaseActivity</string>
     <string name="tab_text_1">Map View</string>
     <string name="tab_text_2">Table View</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="btnCancelText">취소</string>
+    <string name="btnAddText">입력</string>
+
+
+    <string name="addSideEffectTitle">백신 부작용 추가</string>
+    <string name="vaccineNameText">백신</string>
+    <string name="sideEffectText">부작용</string>
+    <string name="occurProbabilityText">발현 확률</string>
+    <string name="treatmentText">대처 방법</string>
+    <string name="deadText">사망자 수</string>
+    <string name="vaccineNameInputHint">백신 이름을 입력하세요.</string>
+    <string name="sideEffectInputHint">부작용의 종류를 입력하세요.</string>
+    <string name="occurProbabilityInputHint">발현 확률을 입력하세요.</string>
+    <string name="treatmentInputHint">부작용 대처방법을 입력하세요.</string>
+    <string name="deadInputHint">사망자 수를 입력하세요.</string>
+
+
+    <string name="addVisitedRecordTitle">확진자 방문장소 추가</string>
+    <string name="placeNameText">장소명</string>
+    <string name="visitedTimeText">방문 시간</string>
+    <string name="addressText">주소</string>
+    <string name="latitudeText">위도</string>
+    <string name="longitudeText">경도</string>
+    <string name="placeNameInputHint">방문 장소명을 입력하세요.</string>
+    <string name="visitedTimeInputHint">방문 시간을 입력하세요.</string>
+    <string name="addressInputHint">주소를 입력하세요.</string>
+    <string name="latitudeInputHint">위도를 입력하세요.</string>
+    <string name="longitudeInputHint">경도를 입력하세요.</string>
+
 </resources>

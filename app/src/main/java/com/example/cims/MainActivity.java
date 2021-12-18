@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.cims.HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity;
-import com.example.cims.HCI_layer.InformationManagement_UI.AddActivity;
+import com.example.cims.HCI_layer.InformationManagement_UI.ManageInfoActivity;
 import com.example.cims.HCI_layer.Vaccine_UI.VaccineActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AddActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ManageInfoActivity.class);
                 startActivity(intent);
             }
         });
