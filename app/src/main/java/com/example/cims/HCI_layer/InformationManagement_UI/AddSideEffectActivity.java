@@ -4,18 +4,23 @@ import com.example.cims.R;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class AddSideEffectActivity extends AppCompatActivity {
 
-    private EditText vaccineNameInput, sideEffectInput, occurProbabilityInput, treatmentInput, deadInput;
+    private Spinner vaccineNameInput;
+    private EditText sideEffectInput, occurProbabilityInput, treatmentInput, deadInput;
     private Button cancel_btn, add_btn;
     private AlertDialog dialog;
 
@@ -25,11 +30,19 @@ public class AddSideEffectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_side_effect);
 
         //아이디 값 찾아주기
-        vaccineNameInput = (EditText) findViewById(R.id.vaccineNameInput);
+        vaccineNameInput = (Spinner) findViewById(R.id.vaccineNameInput);
         sideEffectInput = (EditText) findViewById(R.id.sideEffectInput);
         occurProbabilityInput= (EditText) findViewById(R.id.occurProbabilityInput);
         treatmentInput = (EditText) findViewById(R.id.treatmentInput);
         deadInput = (EditText) findViewById(R.id.deadInput);
+
+        //Spinner 설정
+        String[] vaccines = {"화이자", "모더나", "얀센", "아스트라제네카"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_dropdown_item,
+                vaccines);
+        vaccineNameInput.setAdapter(adapter);
+        vaccineNameInput.setSelection(0);
 
         //입력 버튼 클릭 시 수행
         add_btn = findViewById(R.id.add_btn);
@@ -37,7 +50,7 @@ public class AddSideEffectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 //각 EditText에 현재 입력되어 있는 값 가져오기
-                String vaccineName = vaccineNameInput.getText().toString();
+                String vaccineName = vaccineNameInput.getSelectedItem().toString();
                 String sideEffect = sideEffectInput.getText().toString();
                 String occurProbability = occurProbabilityInput.getText().toString();
                 String treatment = treatmentInput.getText().toString();
@@ -69,6 +82,17 @@ public class AddSideEffectActivity extends AppCompatActivity {
                              }
                              DB 입력 실패시에도 똑같이 정보관리화면 돌아갈거면 if문에는 toast만 넣어도 될 듯
                              */
+                            /*
+                            //알림 생성
+                            String notificationTitle = "신규 정보 업데이트";
+                            String notificationContent = "백신 부작용 정보가 업데이트되었습니다.";
+                            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(AddSideEffectActivity.this, CHANNEL_ID)
+                                    .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+                                    .setContentTitle(notificationTitle)
+                                    .setContentText(notificationContent)
+                                    .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                            */
+
 
                         }
                     });
