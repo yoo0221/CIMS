@@ -18,12 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".HCI_layer.InformationManagement_UI.AddVisitedRecordActivity" />
-        <activity
-            android:name=".HCI_layer.InformationManagement_UI.AddSideEffectActivity" />
-        <activity
-            android:name=".HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity" />
+        <activity android:name=".HCI_layer.InformationManagement_UI.AddVisitedRecordActivity" />
+        <activity android:name=".HCI_layer.InformationManagement_UI.AddSideEffectActivity" />
+        <activity android:name=".HCI_layer.InformationManagement_UI.AddActivity" />
+        <activity android:name=".HCI_layer.Vaccine_UI.VaccineActivity" />
+        <activity android:name=".HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity" />
     </application>
 
 </manifest>
