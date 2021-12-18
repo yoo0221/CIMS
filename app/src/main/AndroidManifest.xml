@@ -8,6 +8,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CIMS" />
+        android:theme="@style/Theme.CIMS">
+        <activity
+            android:name=".HCI_layer.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HCI_layer.InformationManagement_UI.AddVisitedRecordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HCI_layer.InformationManagement_UI.AddSideEffectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity"
+            android:exported="true" />
+    </application>
 
 </manifest>

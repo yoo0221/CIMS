@@ -1,6 +1,6 @@
-package com.example.cims.VaccineInfo;
+package com.example.cims.PD_layer.Vaccine;
 
-import com.example.cims.VaccineInfo.SideEffectInfo.SideEffect;
+import com.example.cims.PD_layer.Vaccine.SideEffect.SideEffect;
 
 import java.util.ArrayList;
 

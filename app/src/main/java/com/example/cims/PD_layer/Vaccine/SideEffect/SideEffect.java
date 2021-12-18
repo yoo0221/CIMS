@@ -1,6 +1,6 @@
-package com.example.cims.VaccineInfo.SideEffectInfo;
+package com.example.cims.PD_layer.Vaccine.SideEffect;
 
-import com.example.cims.Alert.Notice;
+import com.example.cims.PD_layer.Alert.Notice;
 
 public class SideEffect {
     private String symptom;

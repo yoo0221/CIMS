@@ -1,4 +1,6 @@
-package com.example.cims.ConfirmedCase.VisitRecordInfo;
+package com.example.cims.PD_layer.ConfirmedCase;
+
+import com.example.cims.PD_layer.ConfirmedCase.VisitedRecord.VisitRecord;
 
 public class Place {
     private int lat;

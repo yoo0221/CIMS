@@ -1,4 +1,4 @@
-package com.example.cims.Alert;
+package com.example.cims.PD_layer.Alert;
 
 public class Notice {
     private String category;
