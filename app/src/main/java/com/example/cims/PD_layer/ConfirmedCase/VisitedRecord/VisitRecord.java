@@ -1,6 +1,6 @@
-package com.example.cims.ConfirmedCase.VisitRecordInfo;
+package com.example.cims.PD_layer.ConfirmedCase.VisitedRecord;
 
-import com.example.cims.Alert.Notice;
+import com.example.cims.PD_layer.Alert.Notice;
 
 public class VisitRecord {
     private String visitedDate;
