@@ -10,17 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CIMS">
         <activity
-            android:name=".HCI_layer.MainActivity"
-            android:exported="true" />
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".HCI_layer.InformationManagement_UI.AddVisitedRecordActivity"
-            android:exported="true" />
+            android:name=".HCI_layer.InformationManagement_UI.AddVisitedRecordActivity" />
         <activity
-            android:name=".HCI_layer.InformationManagement_UI.AddSideEffectActivity"
-            android:exported="true" />
+            android:name=".HCI_layer.InformationManagement_UI.AddSideEffectActivity" />
         <activity
-            android:name=".HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity"
-            android:exported="true" />
+            android:name=".HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity" />
     </application>
 
 </manifest>
