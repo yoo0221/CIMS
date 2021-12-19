@@ -43,14 +43,14 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
         add_btn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 //입력 값 저장
-                final String placeName = placeNameInput.getText().toString();
-                final String visitedTime = visitedTimeInput.getText().toString();
-                final String address = addressInput.getText().toString();
-                final double latitude = Float.parseFloat(latitudeInput.getText().toString());
-                final double longitude = Float.parseFloat(longitudeInput.getText().toString());
+                /*final*/ String place = placeNameInput.getText().toString();
+                /*final*/ String visitedDate = visitedTimeInput.getText().toString();
+                /*final*/ String address = addressInput.getText().toString();
+                /*final*/ double lat = Float.parseFloat(latitudeInput.getText().toString());
+                /*final*/ double lng = Float.parseFloat(longitudeInput.getText().toString());
 
                 //입력되지 않은 칸이 있을 경우
-                if (placeName.equals("") || visitedTime.equals("") || address.equals("") || Double.toString(latitude).equals("") || Double.toString(longitude).equals("")){
+                if (place.equals("") || visitedDate.equals("") || address.equals("") || Double.toString(lat).equals("") || Double.toString(lng).equals("")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(AddVisitedRecordActivity.this);
                     builder.setMessage("모든 칸을 입력하세요.");
                     builder.setNegativeButton("확인", null);
@@ -63,45 +63,37 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
                     builder.setMessage("확진자 방문장소 정보를 추가하시겠습니까?");
                     builder.setPositiveButton("확인", new DialogInterface.OnClickListener(){
                         public void onClick(DialogInterface dialog, int id){    //확인 선택 시 DB에 각 String 저장
-                            // DB 입력!
-                            Toast.makeText(getApplicationContext(), "부작용 정보 전송 중 ...", Toast.LENGTH_LONG).show();
-                            Response.Listener<String> responsListener = new Response.Listener<String>() {
+                            Toast.makeText(getApplicationContext(), "방문 정보 전송 시작", Toast.LENGTH_SHORT).show();
+                            //Response listener 활성화
+                            Response.Listener<String> responseListener = new Response.Listener<String>() {
                                 @Override
                                 public void onResponse(String response) {
                                     try {
                                         JSONObject jsonObject = new JSONObject(response);
                                         boolean success = jsonObject.getBoolean("success");
                                         if (success) {
-                                            Toast.makeText(getApplicationContext(), "부작용 정보가 추가되었습니다.", Toast.LENGTH_LONG).show();
-                                            Intent intent = new Intent(AddVisitedRecordActivity.this, ManageInfoActivity.class);
+                                            Toast.makeText(getApplicationContext(), "방문 정보가 추가되었습니다.", Toast.LENGTH_LONG).show();
+                                            Intent intent = new Intent(getApplicationContext(), ManageInfoActivity.class);
                                             startActivity(intent);    //정보 관리 화면으로 돌아감
                                         }
                                         else {
-                                            Toast.makeText(getApplicationContext(), "부작용 정보 추가에 실패하였습니다.", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(), "방문 정보 추가에 실패하였습니다.", Toast.LENGTH_LONG).show();
                                             return;
                                         }
                                     } catch (JSONException e) {
+                                        Toast.makeText(getApplicationContext(), "실패", Toast.LENGTH_SHORT).show();
                                         e.printStackTrace();
                                     }
                                 }
                             };
-                            /* DB 입력 성공/실패시 동작
-                             if (success) {
-                             Toast.makeText(getApplicationContext(), "부작용 정보가 추가되었습니다.", Toast.LENGTH_LONG).show();
-                             Intent.intent = new Intent(getApplicationContext(), ManagementInfoActivity.class);
-                             startActivity(intent);    //정보 관리 화면으로 돌아감
-                             }
-                             else {
-                             Toast.makeText(getApplicationConotext(), "부작용 정보 추가에 실패하였습니다.", Toast.LENGTH_LONG).show();
-                             }
-                             DB 입력 실패시에도 똑같이 정보관리화면 돌아갈거면 if문에는 toast만 넣어도 될 듯
-                             */
 
-                            AddVisitedRecordRequest addVisitedRecordRequest = new AddVisitedRecordRequest(visitedTime, placeName, address, latitude, longitude, responsListener);
+                            //Toast.makeText(getApplicationContext(), "request 요청", Toast.LENGTH_LONG).show();
+                            AddVisitedRecordRequest addVisitedRecordRequest = new AddVisitedRecordRequest(visitedDate, place, address, lat, lng, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(AddVisitedRecordActivity.this);
                             queue.add(addVisitedRecordRequest);
                         }
                     });
+
                     builder.setNegativeButton("취소", null);  //취소 선택 시 부작용 입력 화면으로 복귀
                     dialog = builder.create();
                     dialog.show();
