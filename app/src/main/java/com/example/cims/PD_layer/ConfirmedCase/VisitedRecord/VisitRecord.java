@@ -19,4 +19,16 @@ public class VisitRecord {
         Notice message = new Notice("확진자 정보", "방문 장소 정보");
         message.createAlert("추가");
     }
+
+    public String getVisitedDate() {
+        return visitedDate;
+    }
+
+    public String getPlaceName() {
+        return placeName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 }

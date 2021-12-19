@@ -3,6 +3,7 @@ package com.example.cims.PD_layer.ConfirmedCase;
 import com.example.cims.PD_layer.ConfirmedCase.VisitedRecord.VisitRecord;
 
 public class Place {
+
     private double lat;
     private double lng;
     private VisitRecord visitRecord;
@@ -22,5 +23,17 @@ public class Place {
 
     public void addToMap(){
         //place.lat, place.lng => map에 마커 추가
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public VisitRecord getVisitRecord() {
+        return visitRecord;
     }
 }
