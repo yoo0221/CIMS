@@ -3,13 +3,16 @@ package com.example.cims.PD_layer.Alert;
 public class Notice {
     private String category;
     private String description;
+
     public Notice(String category, String description){
         this.category = category;
         this.description = description;
-        //Notification Builder함수 추가해서 알림 바로 전송
-        createAlert();
     }
-    public void createAlert(){
 
+    public void createAlert(String method){
+        String title = category + "카테고리 수정";
+        String content = description + "의 내용이 " + method + "되었습니다.";
+
+        //notification 만들기
     }
 }

@@ -13,14 +13,11 @@
     <string name="addSideEffectTitle">백신 부작용 추가</string>
     <string name="vaccineNameText">백신 종류</string>
     <string name="sideEffectText">부작용</string>
-    <string name="occurProbabilityText">발현 확률</string>
+    <string name="getSymptomText">발현 인원</string>
     <string name="treatmentText">대처 방법</string>
-    <string name="deadText">사망자 수</string>
-    <string name="vaccineNameInputHint">백신 이름을 입력하세요.</string>
-    <string name="sideEffectInputHint">부작용의 종류를 입력하세요.</string>
-    <string name="occurProbabilityInputHint">발현 확률을 입력하세요.</string>
+    <string name="symptomInputHint">부작용의 증상을 입력하세요.</string>
+    <string name="getSymptomInputHint">발현 인원을 입력하세요.</string>
     <string name="treatmentInputHint">부작용 대처방법을 입력하세요.</string>
-    <string name="deadInputHint">사망자 수를 입력하세요.</string>
 
 
     <string name="addVisitedRecordTitle">확진자 방문장소 추가</string>
@@ -34,5 +31,6 @@
     <string name="addressInputHint">주소를 입력하세요.</string>
     <string name="latitudeInputHint">위도를 입력하세요.</string>
     <string name="longitudeInputHint">경도를 입력하세요.</string>
+
 
 </resources>

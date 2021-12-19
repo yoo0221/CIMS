@@ -11,6 +11,12 @@ public class VisitRecord {
         this.visitedDate = visitedDate;
         this.placeName = placeName;
         this.address = address;
-        Notice message = new Notice("확진자 카테고리", "방문 장소가 업데이트 되었습니다.");
+
+        makeNotice();
+    }
+
+    public void makeNotice(){
+        Notice message = new Notice("확진자 정보", "방문 장소 정보");
+        message.createAlert("추가");
     }
 }

@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class VaccineActivity extends AppCompatActivity {
+    int vac_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class VaccineActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                vac_id = 1;
                 Intent intent = new Intent(getApplicationContext(), PfizerActivity.class);
                 startActivity(intent);
                 finish();
@@ -36,6 +38,7 @@ public class VaccineActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                vac_id = 2;
                 Intent intent = new Intent(getApplicationContext(), ModernaActivity.class);
                 startActivity(intent);
                 finish();
@@ -49,6 +52,7 @@ public class VaccineActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                vac_id = 3;
                 Intent intent = new Intent(getApplicationContext(), JanssenActivity.class);
                 startActivity(intent);
                 finish();
@@ -64,6 +68,7 @@ public class VaccineActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                vac_id = 4;
                 Intent intent = new Intent(getApplicationContext(), AstraZenecaActivity.class);
                 startActivity(intent);
                 finish();

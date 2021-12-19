@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -12,28 +11,24 @@
         android:gravity="center"
         android:text="확진자 동선 목록" />
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#999999"
-        android:stretchColumns="*">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"/>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:gravity="center"
-                android:text="방문일시" />
-            <TextView
-                android:gravity="center"
-                android:text="장소명" />
-            <TextView
-                android:gravity="center"
-                android:text="주소" />
-        </TableRow>
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
-
-    </TableLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/createTextView"
+            android:layout_weight="1"
+            android:text="텍스트뷰 동적생성(임시)"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:background="#0082FF"
+        android:orientation="vertical"
+        />
 </LinearLayout>
