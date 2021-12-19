@@ -73,20 +73,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/occurProbabilityText" />
 
-    <TextView
-        android:id="@+id/deadText"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/deadText"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/treatmentText" />
-
     <Spinner
         android:id="@+id/vaccineNameInput"
         android:layout_width="0dp"
@@ -157,24 +143,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/treatmentText"
         app:layout_constraintTop_toBottomOf="@+id/occurProbabilityInput" />
-
-    <EditText
-        android:id="@+id/deadInput"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="50dp"
-        android:ems="10"
-        android:hint="@string/deadInputHint"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/deadText"
-        app:layout_constraintTop_toBottomOf="@+id/treatmentInput" />
 
     <Button
         android:id="@+id/cancel_btn"

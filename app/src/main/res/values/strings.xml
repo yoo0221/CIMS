@@ -15,12 +15,9 @@
     <string name="sideEffectText">부작용</string>
     <string name="occurProbabilityText">발현 확률</string>
     <string name="treatmentText">대처 방법</string>
-    <string name="deadText">사망자 수</string>
-    <string name="vaccineNameInputHint">백신 이름을 입력하세요.</string>
     <string name="sideEffectInputHint">부작용의 종류를 입력하세요.</string>
     <string name="occurProbabilityInputHint">발현 확률을 입력하세요.</string>
     <string name="treatmentInputHint">부작용 대처방법을 입력하세요.</string>
-    <string name="deadInputHint">사망자 수를 입력하세요.</string>
 
 
     <string name="addVisitedRecordTitle">확진자 방문장소 추가</string>
