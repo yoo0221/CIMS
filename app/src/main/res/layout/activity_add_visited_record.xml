@@ -161,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/addressInput" />
 
     <EditText
-        android:id="@+id/longitudeInput"
+        android:id="@+id/occurProbabilityInput"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"

@@ -38,7 +38,7 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
         visitedDateInput = (EditText) findViewById(R.id.visitedDateInput);
         addressInput = (EditText) findViewById(R.id.addressInput);
         latitudeInput = (EditText) findViewById(R.id.latitudeInput);
-        longitudeInput = (EditText) findViewById(R.id.longitudeInput);
+        longitudeInput = (EditText) findViewById(R.id.occurProbabilityInput);
 
         //입력 버튼 클릭 시 수행
         add_btn = findViewById(R.id.add_btn);
@@ -95,7 +95,7 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
                             };
 
                             //Toast.makeText(getApplicationContext(), "request 요청", Toast.LENGTH_LONG).show();
-                            AddVisitedRecordRequest addVisitedRecordRequest = new AddVisitedRecordRequest(visitedDate, placeName, address, lat, lng, responseListener);
+                            AddVisitedRecordRequest addVisitedRecordRequest = new AddVisitedRecordRequest(place, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(AddVisitedRecordActivity.this);
                             queue.add(addVisitedRecordRequest);
                         }

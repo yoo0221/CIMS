@@ -19,4 +19,20 @@ public class SideEffect {
         Notice message = new Notice("백신 정보", "백신 부작용 정보");
         message.createAlert("추가");
     }
+
+    public String getSymptom() {
+        return symptom;
+    }
+
+    public String getTreatment() {
+        return treatment;
+    }
+
+    public int getGetSymptom() {
+        return getSymptom;
+    }
+
+    public double getOccurProbability() {
+        return occurProbability;
+    }
 }
