@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.cims.HCI_layer.ConfirmedCase_UI.TabbedUI.PageViewModel;
-import com.example.cims.databinding.FragmentConfirmedcaseBinding;
+import com.example.cims.databinding.FragmentVaccineBinding;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -23,7 +23,7 @@ public class PlaceholderFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     private com.example.cims.HCI_layer.ConfirmedCase_UI.TabbedUI.PageViewModel pageViewModel;
-    private FragmentConfirmedcaseBinding binding;
+    private FragmentVaccineBinding binding;
 
     public static PlaceholderFragment newInstance(int index) {
         PlaceholderFragment fragment = new PlaceholderFragment();
@@ -49,7 +49,7 @@ public class PlaceholderFragment extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        binding = FragmentConfirmedcaseBinding.inflate(inflater, container, false);
+        binding = FragmentVaccineBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.sectionLabel;

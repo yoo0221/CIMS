@@ -10,6 +10,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.cims.HCI_layer.ConfirmedCase_UI.MapsActivity;
 import com.example.cims.HCI_layer.ConfirmedCase_UI.TableActivity;
+import com.example.cims.HCI_layer.Vaccine_UI.AstrazenecaActivity;
+import com.example.cims.HCI_layer.Vaccine_UI.JanssenActivity;
+import com.example.cims.HCI_layer.Vaccine_UI.ModernaActivity;
+import com.example.cims.HCI_layer.Vaccine_UI.PfizerActivity;
 import com.example.cims.R;
 
 /**
@@ -32,10 +36,16 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position){
             case 0:
-                fragment = new MapsActivity();
+                fragment = new PfizerActivity();
                 break;
             case 1:
-                fragment = new TableActivity();
+                fragment = new ModernaActivity();
+                break;
+            case 2:
+                fragment = new JanssenActivity();
+                break;
+            case 3:
+                fragment = new AstrazenecaActivity();
                 break;
         }
         return fragment;

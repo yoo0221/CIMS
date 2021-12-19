@@ -3,10 +3,14 @@ package com.example.cims.HCI_layer.Vaccine_UI;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.cims.HCI_layer.ConfirmedCase_UI.TabbedUI.SectionsPagerAdapter;
 import com.example.cims.HCI_layer.MenuActivity;
 import com.example.cims.MainActivity;
 import com.example.cims.R;
+import com.example.cims.databinding.ActivityConfirmedCaseBinding;
+import com.example.cims.databinding.ActivityVaccineBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
 
 import android.app.TabActivity;
 import android.view.MenuItem;
@@ -17,15 +21,28 @@ import android.widget.TabHost;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
 
 public class VaccineActivity extends AppCompatActivity {
     int vac_id;
 
+    private ActivityVaccineBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_vaccine);
+
+        binding = ActivityVaccineBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        //ViewPager viewPager = binding.viewPager;
+        //viewPager.setAdapter(sectionsPagerAdapter);
+        //TabLayout tabs = binding.tabs;
+        //tabs.setupWithViewPager(viewPager);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.topbar_vaccine);
         toolbar.setTitle(R.string.app_name);
