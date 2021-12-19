@@ -9,6 +9,11 @@
     <string name="btnCancelText">취소</string>
     <string name="btnAddText">입력</string>
 
+    <string name="vaccine_1">화이자</string>
+    <string name="vaccine_2">모더나</string>
+    <string name="vaccine_3">얀센</string>
+    <string name="vaccine_4">아스트라제네카</string>
+
 
     <string name="addSideEffectTitle">백신 부작용 추가</string>
     <string name="vaccineNameText">백신 종류</string>
