@@ -13,7 +13,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.cims.PD_layer.Vaccine.SideEffect.SideEffect;
 import com.example.cims.R;
 
 public class AddSideEffectActivity extends AppCompatActivity {
@@ -48,12 +47,10 @@ public class AddSideEffectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 //각 EditText에 현재 입력되어 있는 값 가져오기
-                String vaccineName = vaccineNameInput.getSelectedItem().toString();
-                String symptom = symptomInput.getText().toString();
-                String treatment = treatmentInput.getText().toString();
-                int getSymptom = Integer.parseInt(getSymptomInput.getText().toString());
-                double occurProbability = getSymptom;
-
+                /*final*/ String vaccineName = vaccineNameInput.getSelectedItem().toString();
+                /*final*/ String symptom = symptomInput.getText().toString();
+                /*final*/ String treatment = treatmentInput.getText().toString();
+                /*final*/ int getSymptom = Integer.parseInt(getSymptomInput.getText().toString());
 
                 //입력되지 않은 칸이 있을 경우
                 if (vaccineName.equals("") || symptom.equals("") || Integer.toString(getSymptom).equals("") || treatment.equals("")){
@@ -70,9 +67,15 @@ public class AddSideEffectActivity extends AppCompatActivity {
                     builder.setPositiveButton("확인", new DialogInterface.OnClickListener(){
                         public void onClick(DialogInterface dialog, int id) {    //확인 선택 시 SideEffect객체 생성 및 DB에 저장
                             //SideEffect 객체 생성 및 Vaccine 객체에 연결
+                            /* vaccineName에 따라 DB에서 해당 백신의 vaccinated 값 받아오고
+                               double occurProbability = getSymptom/vaccinated;
+                               SideEffect sideEffect = new SideEffect(symptom, treatment, getSymptom, occurProbability);
+                               객체 정의해서 백신 객체의 sideEffects 배열에 추가  -> 음 요거 자체가 그냥 DB 입력인가
 
-                            SideEffect sideEffect = new SideEffect(symptom, treatment, getSymptom);
-
+                               <참고> Vaccine 클래스 메소드로
+                               public void appendSideEffect(SideEffect sideEffect) 이걸 만들어놓았긴 합니다
+                               DB로 넘어가는거면 쓰일지는 모르겠음
+                             */
 
                             // DB 입력!
                             /* DB 입력 성공/실패시 동작

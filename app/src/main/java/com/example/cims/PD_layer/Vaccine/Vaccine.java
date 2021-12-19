@@ -1,7 +1,6 @@
 package com.example.cims.PD_layer.Vaccine;
 
 import com.example.cims.PD_layer.Vaccine.SideEffect.SideEffect;
-
 import java.util.ArrayList;
 
 public class Vaccine {
@@ -21,9 +20,6 @@ public class Vaccine {
         sideEffects.add(sideEffect);
     }
 
-    public int getVaccinated(){
-        return vaccinated;
-    }
     public void requestSideInfo() {
 
     }
