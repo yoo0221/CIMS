@@ -25,6 +25,7 @@ public class AstraZenecaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PfizerActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -36,6 +37,7 @@ public class AstraZenecaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ModernaActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -48,6 +50,7 @@ public class AstraZenecaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), JanssenActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -62,6 +65,7 @@ public class AstraZenecaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AstraZenecaActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
