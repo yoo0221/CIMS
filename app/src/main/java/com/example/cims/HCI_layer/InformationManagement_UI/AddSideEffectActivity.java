@@ -13,13 +13,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.cims.PD_layer.Alert.Notice;
+import com.example.cims.PD_layer.Vaccine.SideEffect.SideEffect;
 import com.example.cims.R;
 
 public class AddSideEffectActivity extends AppCompatActivity {
 
     private Spinner vaccineNameInput;
-    private EditText sideEffectInput, occurProbabilityInput, treatmentInput;
+    private EditText symptomInput, getSymptomInput, treatmentInput;
     private Button cancel_btn, add_btn;
     private AlertDialog dialog;
 
@@ -30,8 +30,8 @@ public class AddSideEffectActivity extends AppCompatActivity {
 
         //아이디 값 찾아주기
         vaccineNameInput = (Spinner) findViewById(R.id.vaccineNameInput);
-        sideEffectInput = (EditText) findViewById(R.id.sideEffectInput);
-        occurProbabilityInput= (EditText) findViewById(R.id.occurProbabilityInput);
+        symptomInput = (EditText) findViewById(R.id.symptomInput);
+        getSymptomInput = (EditText) findViewById(R.id.getSymptomInput);
         treatmentInput = (EditText) findViewById(R.id.treatmentInput);
 
         //Spinner 설정
@@ -49,12 +49,14 @@ public class AddSideEffectActivity extends AppCompatActivity {
             public void onClick(View view){
                 //각 EditText에 현재 입력되어 있는 값 가져오기
                 String vaccineName = vaccineNameInput.getSelectedItem().toString();
-                String sideEffect = sideEffectInput.getText().toString();
-                String occurProbability = occurProbabilityInput.getText().toString();
+                String symptom = symptomInput.getText().toString();
                 String treatment = treatmentInput.getText().toString();
+                int getSymptom = Integer.parseInt(getSymptomInput.getText().toString());
+                double occurProbability = getSymptom;
+
 
                 //입력되지 않은 칸이 있을 경우
-                if (vaccineName.equals("") || sideEffect.equals("") || occurProbability.equals("") || treatment.equals("")){
+                if (vaccineName.equals("") || symptom.equals("") || Integer.toString(getSymptom).equals("") || treatment.equals("")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(AddSideEffectActivity.this);
                     builder.setMessage("모든 칸을 입력하세요.");
                     builder.setPositiveButton("확인", null);
@@ -66,7 +68,11 @@ public class AddSideEffectActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(AddSideEffectActivity.this);
                     builder.setMessage("부작용 정보를 추가하시겠습니까?");
                     builder.setPositiveButton("확인", new DialogInterface.OnClickListener(){
-                        public void onClick(DialogInterface dialog, int id) {    //확인 선택 시 sideEffect 객체 생성 및 DB에 저장
+                        public void onClick(DialogInterface dialog, int id) {    //확인 선택 시 SideEffect객체 생성 및 DB에 저장
+                            //SideEffect 객체 생성 및 Vaccine 객체에 연결
+
+                            SideEffect sideEffect = new SideEffect(symptom, treatment, getSymptom);
+
 
                             // DB 입력!
                             /* DB 입력 성공/실패시 동작
@@ -81,9 +87,6 @@ public class AddSideEffectActivity extends AppCompatActivity {
                              DB 입력 실패시에도 똑같이 정보관리화면 돌아갈거면 if문에는 toast만 넣어도 될 듯
                              */
 
-                            //알림 생성
-                            Notice notification = new Notice("백신 정보", "백신 부작용 정보");
-                            notification.createAlert("추가");
 
                         }
                     });

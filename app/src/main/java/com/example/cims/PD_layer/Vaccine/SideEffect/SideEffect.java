@@ -7,11 +7,20 @@ public class SideEffect {
     private String treatment;
     private int getSymptom;
     private double occurProbability;
-    public SideEffect(String symptom, String treatment, int getSymptom, double occurProbability){
+
+    public SideEffect(String symptom, String treatment, int getSymptom){
         this.symptom = symptom;
         this.treatment = treatment;
         this.getSymptom = getSymptom;
-        this.occurProbability = occurProbability;
-        Notice message = new Notice("백신 카테고리", "부작용 정보가 업데이트 되었습니다.");
+    }
+
+    //public getOccurProbability(){
+        //this.occurProbability = this.getSymptom / 백신object.getvaccinated();
+    //}
+
+    public void makeNotice(){
+        Notice message = new Notice("백신 정보", "백신 부작용 정보");
+        message.createAlert("추가");
+
     }
 }

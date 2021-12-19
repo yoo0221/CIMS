@@ -46,13 +46,13 @@
         app:layout_constraintTop_toBottomOf="@+id/vaccineNameText" />
 
     <TextView
-        android:id="@+id/occurProbabilityText"
+        android:id="@+id/getSymptomText"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="60dp"
-        android:text="@string/occurProbabilityText"
+        android:text="@string/getSymptomText"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textSize="16sp"
@@ -71,7 +71,7 @@
         android:gravity="center_horizontal"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/occurProbabilityText" />
+        app:layout_constraintTop_toBottomOf="@+id/getSymptomText" />
 
     <Spinner
         android:id="@+id/vaccineNameInput"
@@ -90,16 +90,16 @@
         app:layout_constraintTop_toBottomOf="@+id/addSideEffectTitle" />
 
     <EditText
-        android:id="@+id/sideEffectInput"
+        android:id="@+id/symptomInput"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginLeft="25dp"
         android:layout_marginRight="50dp"
         android:ems="10"
-        android:hint="@string/sideEffectInputHint"
+        android:hint="@string/symptomInputHint"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/vaccineNameInput" />
 
     <EditText
-        android:id="@+id/occurProbabilityInput"
+        android:id="@+id/getSymptomInput"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
@@ -117,13 +117,13 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="50dp"
         android:ems="10"
-        android:hint="@string/occurProbabilityInputHint"
+        android:hint="@string/getSymptomInputHint"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/occurProbabilityText"
-        app:layout_constraintTop_toBottomOf="@+id/sideEffectInput" />
+        app:layout_constraintStart_toEndOf="@+id/getSymptomText"
+        app:layout_constraintTop_toBottomOf="@+id/symptomInput" />
 
     <EditText
         android:id="@+id/treatmentInput"
@@ -142,7 +142,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/treatmentText"
-        app:layout_constraintTop_toBottomOf="@+id/occurProbabilityInput" />
+        app:layout_constraintTop_toBottomOf="@+id/getSymptomInput" />
+
 
     <Button
         android:id="@+id/cancel_btn"
