@@ -4,32 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Program/CIMS/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3963541666666667" />
-        <entry key="..\:/Program/CIMS/app/src/main/res/layout/activity_add_side_effect.xml" value="0.1" />
+        <entry key="..\:/Program/CIMS/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.3140625" />
+        <entry key="..\:/Program/CIMS/app/src/main/res/layout/activity_add_side_effect.xml" value="0.1506849315068493" />
         <entry key="..\:/Program/CIMS/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_astrazeneca.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_janssen.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_main.xml" value="0.2692502532928065" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_moderna.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_pfizer.xml" value="0.2712765957446808" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_vaccine.xml" value="0.1" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_vaccine2.xml" value="0.2712765957446808" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_vaccine3.xml" value="0.2712765957446808" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/activity_vaccine4.xml" value="0.2712765957446808" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/fragment1_layout.xml" value="0.2692502532928065" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/fragment2_layout.xml" value="0.2692502532928065" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/fragment3_layout.xml" value="0.2692502532928065" />
-        <entry key="..\:/Users/WCO302/AndroidStudioProjects/CIMS2/app/src/main/res/layout/fragment_confirmedcase.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_add_side_effect.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_add_visited_record.xml" value="0.13360507246376813" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_bottombar.xml" value="0.2" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_confirmed_case.xml" value="0.264" />
-        <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_manage_info.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_manager.xml" value="0.13360507246376813" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_maps.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_menu.xml" value="0.176" />
+        <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_navigation.xml" value="0.1" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/activity_vaccine.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/app_bar_layout.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/bottom_bar_layout.xml" value="0.2" />
+        <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/layout/top_bar_layout.xml" value="0.4" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/menu/bar_menu.xml" value="0.225" />
         <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/menu/bottombar_menu.xml" value="0.2" />
+        <entry key="..\:/Users/milou/AndroidStudioProjects/CIMS/app/src/main/res/menu/navigation_menu.xml" value="0.11041666666666666" />
       </map>
     </option>
   </component>

@@ -1,9 +1,12 @@
 package com.example.cims;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,10 +22,14 @@ import android.widget.Toast;
 
 import com.example.cims.HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity;
 import com.example.cims.HCI_layer.InformationManagement_UI.ManageInfoActivity;
+import com.example.cims.HCI_layer.MenuActivity;
 import com.example.cims.HCI_layer.Vaccine_UI.VaccineActivity;
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    private DrawerLayout mDrawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +40,13 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
 
-        //BottomAppBar bottombar = (BottomAppBar) findViewById(R.id.bottombar);
-        //setSupportActionBar(bottombar);
-/*
-        Button btn_home = findViewById(R.id.menu_home);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true); // 뒤로가기 버튼 (왼쪽)
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
+
+
+        FloatingActionButton btn_home = findViewById(R.id.fab_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
+
 
         Button btn1 = (Button) findViewById(R.id.btn_vaccine);
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+/*
     public boolean onCreateOptionsMenu(Menu menu) {
         //return super.onCreateOptionsMenu(menu);
         MenuInflater menuInflater = getMenuInflater();
@@ -112,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //ToolBar에 추가된 항목의 select 이벤트를 처리하는 함수
+
     public boolean onOptionsItemSelected(MenuItem item) {
         //return super.onOptionsItemSelected(item);
         switch (item.getItemId()) {
@@ -120,6 +133,19 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
         return false;
+    }
+
+*/
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+
     }
 
 }

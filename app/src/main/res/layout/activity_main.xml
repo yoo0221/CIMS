@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -14,55 +13,79 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/main"
-        app:titleTextColor="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        app:titleTextColor="@color/white" />
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginHorizontal="10dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:text="▶ 카테고리 선택" />
+        android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btn_vaccine"
+            android:id="@+id/btn_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="290dp"
+            android:layout_marginBottom="70dp"
+            android:background="@color/white"
+            android:text="manager"
+            android:textColor="#757575" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/main"
-            android:text="백신 부작용"
-            android:textColor="@color/white" />
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_confirmedcase"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:background="@color/main"
-            android:text="확진자 방문 장소"
-            android:textColor="@color/white" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="▶ 카테고리 선택"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_manager"
+            <Button
+                android:id="@+id/btn_vaccine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/main"
+                android:text="백신 부작용"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_confirmedcase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/main"
+                android:text="확진자 방문 장소"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/main"
+        app:layout_anchor="@+id/fab_home"
+        app:layout_anchorGravity="bottom|center" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginLeft="290dp"
-        android:layout_marginBottom="70dp"
-        android:background="@color/white"
-        android:text="manager"
-        android:textColor="#757575" />
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/main"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
 
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
