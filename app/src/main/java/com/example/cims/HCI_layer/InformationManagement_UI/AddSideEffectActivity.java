@@ -106,7 +106,7 @@ public class AddSideEffectActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(), ManageInfoActivity.class);
                 startActivity(intent);  //정보 관리 화면으로 돌아감
-
+                finish();
                 Toast.makeText(getApplicationContext(), "취소되었습니다.", Toast.LENGTH_SHORT).show();
             }
         });
