@@ -45,11 +45,8 @@ public class TableActivity extends Fragment {
                     JSONObject jsonObject;
                     for(int i = 0;i < jsonArray.length();i++){
                         jsonObject = (JSONObject) jsonArray.opt(i);
-                        Toast.makeText((ConfirmedCaseActivity) getActivity(), "data receive", Toast.LENGTH_SHORT).show();
                         VisitRecord visitRecord = new VisitRecord(jsonObject.getString("visitedDate"), jsonObject.getString("place"), jsonObject.getString("address"));
                         visitRecordArrayList.add(visitRecord);
-                        Toast.makeText((ConfirmedCaseActivity) getActivity(), "complete", Toast.LENGTH_SHORT).show();
-                        Toast.makeText((ConfirmedCaseActivity) getActivity(), Integer.toString(visitRecordArrayList.size()), Toast.LENGTH_SHORT).show();
                     }
                     Iterator<VisitRecord> itr = visitRecordArrayList.iterator();
                     while(itr.hasNext()) {
