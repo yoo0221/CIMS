@@ -8,7 +8,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cims.HCI_layer.ConfirmedCase_UI.ConfirmedCaseActivity;
-import com.example.cims.HCI_layer.Vaccine_UI.PfizerActivity;
 import com.example.cims.HCI_layer.Vaccine_UI.VaccineActivity;
 import com.example.cims.MainActivity;
 import com.example.cims.R;
