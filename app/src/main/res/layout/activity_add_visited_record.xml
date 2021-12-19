@@ -38,7 +38,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="60dp"
-        android:text="@string/visitedTimeText"
+        android:text="@string/visitedDateText"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textSize="16sp"
@@ -106,7 +106,7 @@
         app:layout_constraintTop_toBottomOf="@+id/addVisitedRecordTitle" />
 
     <EditText
-        android:id="@+id/visitedTimeInput"
+        android:id="@+id/visitedDateInput"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
@@ -115,7 +115,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="50dp"
         android:ems="10"
-        android:hint="@string/visitedTimeInputHint"
+        android:hint="@string/visitedDateInputHint"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/addressText"
-        app:layout_constraintTop_toBottomOf="@+id/visitedTimeInput" />
+        app:layout_constraintTop_toBottomOf="@+id/visitedDateInput" />
 
     <EditText
         android:id="@+id/latitudeInput"
@@ -183,8 +183,7 @@
         android:layout_width="194dp"
         android:layout_height="55dp"
         android:text="@string/btnCancelText"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -193,8 +192,7 @@
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:text="@string/btnAddText"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cancel_btn" />

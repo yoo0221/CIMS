@@ -24,7 +24,7 @@ import org.json.JSONObject;
 
 public class AddVisitedRecordActivity extends AppCompatActivity {
 
-    private EditText placeNameInput, visitedTimeInput, addressInput, latitudeInput, longitudeInput;
+    private EditText placeNameInput, visitedDateInput, addressInput, latitudeInput, longitudeInput;
     private Button cancel_btn, add_btn;
     private AlertDialog dialog;
 
@@ -35,7 +35,7 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_visited_record);
 
         placeNameInput = (EditText) findViewById(R.id.placeNameInput);
-        visitedTimeInput = (EditText) findViewById(R.id.visitedTimeInput);
+        visitedDateInput = (EditText) findViewById(R.id.visitedDateInput);
         addressInput = (EditText) findViewById(R.id.addressInput);
         latitudeInput = (EditText) findViewById(R.id.latitudeInput);
         longitudeInput = (EditText) findViewById(R.id.longitudeInput);
@@ -46,7 +46,7 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
             public void onClick(View view){
                 //입력 값 저장
                 /*final*/ String placeName = placeNameInput.getText().toString();
-                /*final*/ String visitedDate = visitedTimeInput.getText().toString();
+                /*final*/ String visitedDate = visitedDateInput.getText().toString();
                 /*final*/ String address = addressInput.getText().toString();
                 /*final*/ double lat = Float.parseFloat(latitudeInput.getText().toString());
                 /*final*/ double lng = Float.parseFloat(longitudeInput.getText().toString());
