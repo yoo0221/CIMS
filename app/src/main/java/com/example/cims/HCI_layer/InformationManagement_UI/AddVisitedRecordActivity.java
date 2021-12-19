@@ -1,21 +1,23 @@
 package com.example.cims.HCI_layer.InformationManagement_UI;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
-import com.example.cims.DM_layer.AddVisitedRecordRequest;
-import com.example.cims.R;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+import com.example.cims.DM_layer.AddVisitedRecordRequest;
+import com.example.cims.PD_layer.ConfirmedCase.Place;
+import com.example.cims.PD_layer.ConfirmedCase.VisitedRecord.VisitRecord;
+import com.example.cims.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,14 +45,14 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
         add_btn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 //입력 값 저장
-                /*final*/ String place = placeNameInput.getText().toString();
+                /*final*/ String placeName = placeNameInput.getText().toString();
                 /*final*/ String visitedDate = visitedTimeInput.getText().toString();
                 /*final*/ String address = addressInput.getText().toString();
                 /*final*/ double lat = Float.parseFloat(latitudeInput.getText().toString());
                 /*final*/ double lng = Float.parseFloat(longitudeInput.getText().toString());
 
                 //입력되지 않은 칸이 있을 경우
-                if (place.equals("") || visitedDate.equals("") || address.equals("") || Double.toString(lat).equals("") || Double.toString(lng).equals("")){
+                if (placeName.equals("") || visitedDate.equals("") || address.equals("") || Double.toString(lat).equals("") || Double.toString(lng).equals("")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(AddVisitedRecordActivity.this);
                     builder.setMessage("모든 칸을 입력하세요.");
                     builder.setNegativeButton("확인", null);
@@ -62,7 +64,12 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(AddVisitedRecordActivity.this);
                     builder.setMessage("확진자 방문장소 정보를 추가하시겠습니까?");
                     builder.setPositiveButton("확인", new DialogInterface.OnClickListener(){
-                        public void onClick(DialogInterface dialog, int id){    //확인 선택 시 DB에 각 String 저장
+                        public void onClick(DialogInterface dialog, int id){    //확인 선택 시 VisitRecord 객체 생성 및 DB에 저장
+                            //Place 객체 생성 및 visitedRecord 추가
+                            Place place = new Place(lat, lng);
+                            VisitRecord visited = new VisitRecord(visitedDate, placeName, address);
+                            place.appenRecord(visited);
+
                             Toast.makeText(getApplicationContext(), "방문 정보 전송 시작", Toast.LENGTH_SHORT).show();
                             //Response listener 활성화
                             Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -88,7 +95,7 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
                             };
 
                             //Toast.makeText(getApplicationContext(), "request 요청", Toast.LENGTH_LONG).show();
-                            AddVisitedRecordRequest addVisitedRecordRequest = new AddVisitedRecordRequest(visitedDate, place, address, lat, lng, responseListener);
+                            AddVisitedRecordRequest addVisitedRecordRequest = new AddVisitedRecordRequest(visitedDate, placeName, address, lat, lng, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(AddVisitedRecordActivity.this);
                             queue.add(addVisitedRecordRequest);
                         }
