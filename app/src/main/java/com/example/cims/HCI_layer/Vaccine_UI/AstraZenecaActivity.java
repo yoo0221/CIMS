@@ -2,21 +2,20 @@ package com.example.cims.HCI_layer.Vaccine_UI;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.example.cims.R;
-import android.app.TabActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TabHost;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cims.R;
 
-public class VaccineActivity extends AppCompatActivity {
+
+public class AstraZenecaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vaccine);
+        setContentView(R.layout.activity_astrazeneca);
 
         // 화이자 Activity로 넘어갈 버튼
         Button pfizerButton = (Button) findViewById(R.id.buttonPfizer);
