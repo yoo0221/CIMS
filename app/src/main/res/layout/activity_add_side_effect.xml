@@ -32,13 +32,13 @@
         app:layout_constraintTop_toBottomOf="@+id/addSideEffectTitle" />
 
     <TextView
-        android:id="@+id/sideEffectText"
+        android:id="@+id/symptomText"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="60dp"
-        android:text="@string/sideEffectText"
+        android:text="@string/symptomText"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textSize="16sp"
@@ -57,7 +57,7 @@
         android:gravity="center_horizontal"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sideEffectText" />
+        app:layout_constraintTop_toBottomOf="@+id/symptomText" />
 
     <TextView
         android:id="@+id/getSymptomText"
@@ -118,7 +118,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/sideEffectText"
+        app:layout_constraintStart_toEndOf="@+id/symptomText"
         app:layout_constraintTop_toBottomOf="@+id/vaccineNameInput" />
 
     <EditText

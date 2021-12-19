@@ -17,7 +17,7 @@
 
     <string name="addSideEffectTitle">백신 부작용 추가</string>
     <string name="vaccineNameText">백신 종류</string>
-    <string name="sideEffectText">부작용</string>
+    <string name="symptomText">부작용</string>
     <string name="getSymptomText">발현 인원</string>
     <string name="treatmentText">대처 방법</string>
     <string name="occurProbabilityText">발현 확률</string>
