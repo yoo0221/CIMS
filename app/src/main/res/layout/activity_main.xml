@@ -42,7 +42,7 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="▶ 카테고리 선택"
+                android:text="▶ 정보조회 카테고리 선택"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
