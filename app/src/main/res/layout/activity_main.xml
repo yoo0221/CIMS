@@ -28,7 +28,8 @@
             android:layout_marginLeft="290dp"
             android:layout_marginBottom="70dp"
             android:background="@color/white"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            style="?android:attr/borderlessButtonStyle"/>
 
         <LinearLayout
             android:layout_width="match_parent"

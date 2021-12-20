@@ -62,5 +62,4 @@
         <activity android:name=".HCI_layer.Vaccine_UI.AstraZenecaActivity" />
         <activity android:name=".HCI_layer.MenuActivity"/>
     </application>
-
 </manifest>
