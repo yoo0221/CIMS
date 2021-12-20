@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddVisitedRecordRequest extends StringRequest{
-    final static private String URL = "http://yoo0221.ivyro.net/VisitRecordUpload.php";
+    final static private String URL = "http://yoo0221.ivyro.net/visit_record_upload.php";
     private Map<String, String> map;
 
     public AddVisitedRecordRequest(Place place, Response.Listener<String> listener){

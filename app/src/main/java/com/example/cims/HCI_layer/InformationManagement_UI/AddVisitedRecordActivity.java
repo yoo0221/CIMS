@@ -68,7 +68,7 @@ public class AddVisitedRecordActivity extends AppCompatActivity {
                             //Place 객체 생성 및 visitedRecord 추가
                             Place place = new Place(lat, lng);
                             VisitRecord visited = new VisitRecord(visitedDate, placeName, address);
-                            place.appenRecord(visited);
+                            place.appendRecord(visited);
 
                             Toast.makeText(getApplicationContext(), "방문 정보 전송 시작", Toast.LENGTH_SHORT).show();
                             //Response listener 활성화

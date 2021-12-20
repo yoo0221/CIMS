@@ -92,7 +92,7 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
                         jsonObject = (JSONObject) jsonArray.opt(i);
                         Place place = new Place(jsonObject.getDouble("lat"), jsonObject.getDouble("lng"));
                         VisitRecord visitRecord = new VisitRecord(jsonObject.getString("visitedDate"), jsonObject.getString("place"), jsonObject.getString("address"));
-                        place.appenRecord(visitRecord);
+                        place.appendRecord(visitRecord);
                         placeArrayList.add(place);
                     }
                 } catch (JSONException e) {

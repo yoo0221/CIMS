@@ -13,7 +13,7 @@ public class Place {
         this.lng = lng;
     }
 
-    public void appenRecord(VisitRecord visitRecord){
+    public void appendRecord(VisitRecord visitRecord){
         this.visitRecord = visitRecord;
     }
 
