@@ -32,7 +32,7 @@ import java.util.Iterator;
 
 public class PfizerActivity extends AppCompatActivity {
     private TextView listView;
-    private Button btn_loadse;
+    private Button btn_loadse_p;
     private int vac_id = 1;
     private Vaccine pfizer;
 
@@ -91,8 +91,8 @@ public class PfizerActivity extends AppCompatActivity {
 
         // 동적 생성 관련 코드(DB에서의 데이터 불러오기를 일단은 버튼으로 표현)
         listView = findViewById(R.id.listView_astrazeneca);
-        btn_loadse = findViewById(R.id.btn_loadse_p);
-        btn_loadse.setOnClickListener(new View.OnClickListener() {
+        btn_loadse_p = findViewById(R.id.btn_loadse_p);
+        btn_loadse_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int i = 0;
