@@ -17,7 +17,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.cims.DM_layer.AddSideEffectRequest;
-import com.example.cims.DM_layer.AddVisitedRecordRequest;
 import com.example.cims.PD_layer.Vaccine.SideEffect.SideEffect;
 import com.example.cims.R;
 
@@ -106,31 +105,6 @@ public class AddSideEffectActivity extends AppCompatActivity {
                             AddSideEffectRequest addSideEffectRequest = new AddSideEffectRequest(vaccineId, sideEffect, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(AddSideEffectActivity.this);
                             queue.add(addSideEffectRequest);
-                            //확인 선택 시 SideEffect객체 생성 및 DB에 저장
-                            //SideEffect 객체 생성 및 Vaccine 객체에 연결
-                            /* vaccineName에 따라 DB에서 해당 백신의 vaccinated 값 받아오고
-                               double occurProbability = getSymptom/vaccinated;
-                               SideEffect sideEffect = new SideEffect(symptom, treatment, getSymptom, occurProbability);
-                               객체 정의해서 백신 객체의 sideEffects 배열에 추가  -> 음 요거 자체가 그냥 DB 입력인가
-
-                               <참고> Vaccine 클래스 메소드로
-                               public void appendSideEffect(SideEffect sideEffect) 이걸 만들어놓았긴 합니다
-                               DB로 넘어가는거면 쓰일지는 모르겠음
-                             */
-
-                            // DB 입력!
-                            /* DB 입력 성공/실패시 동작
-                             if (success) {
-                             Toast.makeText(getApplicationContext(), "부작용 정보가 추가되었습니다.", Toast.LENGTH_LONG).show();
-                             Intent.intent = new Intent(getApplicationContext(), ManagementInfoActivity.class);
-                             startActivity(intent);    //정보 관리 화면으로 돌아감
-                             }
-                             else {
-                             Toast.makeText(getApplicationContext(), "부작용 정보 추가에 실패하였습니다.", Toast.LENGTH_LONG).show();
-                             }
-                             DB 입력 실패시에도 똑같이 정보관리화면 돌아갈거면 if문에는 toast만 넣어도 될 듯
-                             */
-
 
                         }
                     });
