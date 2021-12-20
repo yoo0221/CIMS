@@ -53,7 +53,9 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
         while(itr.hasNext()) {
             Place place = itr.next();
             LatLng marker = new LatLng(place.getLat(), place.getLng());
-            mMap.addMarker(new MarkerOptions().position(marker).title(place.getVisitRecord().getVisitedDate()).snippet(place.getVisitRecord().getPlaceName()+" / "+place.getVisitRecord().getAddress()));
+            mMap.addMarker(new MarkerOptions().position(marker)
+                               .title(place.getVisitRecord().getVisitedDate())
+                               .snippet(place.getVisitRecord().getPlaceName()+" / "+place.getVisitRecord().getAddress()));
         }
         mMap.setMaxZoomPreference(20);
         mMap.setMinZoomPreference(6.5f);

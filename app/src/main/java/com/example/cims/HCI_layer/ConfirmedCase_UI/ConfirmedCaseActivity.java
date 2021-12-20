@@ -76,10 +76,10 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
         });
     }
 
-
     public ArrayList<Place> getPlaceArrayList() {
         return placeArrayList;
     }
+
 
     public void getPlaces(final VolleyCallBack callBack){
         Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -91,7 +91,9 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
                     for(int i = 0;i < jsonArray.length();i++){
                         jsonObject = (JSONObject) jsonArray.opt(i);
                         Place place = new Place(jsonObject.getDouble("lat"), jsonObject.getDouble("lng"));
-                        VisitRecord visitRecord = new VisitRecord(jsonObject.getString("visitedDate"), jsonObject.getString("place"), jsonObject.getString("address"));
+                        VisitRecord visitRecord = new VisitRecord(jsonObject.getString("visitedDate"),
+                                                                  jsonObject.getString("place"),
+                                                                  jsonObject.getString("address"));
                         place.appendRecord(visitRecord);
                         placeArrayList.add(place);
                     }

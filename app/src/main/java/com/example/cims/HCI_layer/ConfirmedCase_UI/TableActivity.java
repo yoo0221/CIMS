@@ -33,7 +33,10 @@ public class TableActivity extends Fragment {
                 Iterator<Place> itr = ((ConfirmedCaseActivity) getActivity()).getPlaceArrayList().iterator();
                 while(itr.hasNext()) {
                     Place place = itr.next();
-                    text.setText(text.getText() + place.getVisitRecord().getVisitedDate() + "   " + place.getVisitRecord().getPlaceName() + "   " + place.getVisitRecord().getAddress() + "\n");
+                    text.setText(text.getText()
+                                 + place.getVisitRecord().getVisitedDate()
+                                 + "   " + place.getVisitRecord().getPlaceName()
+                                 + "   " + place.getVisitRecord().getAddress() + "\n");
                 }
             }
         });

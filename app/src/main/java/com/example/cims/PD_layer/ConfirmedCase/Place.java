@@ -17,14 +17,6 @@ public class Place {
         this.visitRecord = visitRecord;
     }
 
-    public void requestRecordsInfo(){
-
-    }
-
-    public void addToMap(){
-        //place.lat, place.lng => map에 마커 추가
-    }
-
     public double getLat() {
         return lat;
     }
