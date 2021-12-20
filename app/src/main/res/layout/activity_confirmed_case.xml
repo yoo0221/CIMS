@@ -60,19 +60,5 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_home_confirmedcase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/main"
-        app:layout_anchor="@+id/appBarLayout"
-        app:layout_anchorGravity="center"
-        app:srcCompat="@drawable/ic_baseline_home_24"
-        tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

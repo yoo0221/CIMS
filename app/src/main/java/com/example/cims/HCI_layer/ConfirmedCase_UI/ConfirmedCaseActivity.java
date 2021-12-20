@@ -42,11 +42,11 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         Toolbar toolbar = (Toolbar)findViewById(R.id.topbar_confirmedcase);
         toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
-/*
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true); // 뒤로가기 버튼 (왼쪽)
