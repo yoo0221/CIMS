@@ -6,25 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
-import com.example.cims.DM_layer.LoadVisitedRecordTableRequest;
 import com.example.cims.PD_layer.ConfirmedCase.Place;
-import com.example.cims.PD_layer.ConfirmedCase.VisitedRecord.VisitRecord;
 import com.example.cims.R;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class TableActivity extends Fragment {

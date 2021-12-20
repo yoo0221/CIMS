@@ -1,20 +1,16 @@
 package com.example.cims.HCI_layer.ConfirmedCase_UI;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.cims.DM_layer.LoadVisitedRecordTableRequest;
+import com.example.cims.DM_layer.LoadVisitedRecordRequest;
 import com.example.cims.DM_layer.VolleyCallBack;
 import com.example.cims.HCI_layer.MenuActivity;
 import com.example.cims.PD_layer.ConfirmedCase.Place;
@@ -24,7 +20,6 @@ import com.example.cims.R;
 import com.example.cims.databinding.ActivityConfirmedCaseBinding;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import com.example.cims.HCI_layer.ConfirmedCase_UI.TabbedUI.SectionsPagerAdapter;
@@ -34,7 +29,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class ConfirmedCaseActivity extends AppCompatActivity {
     private ActivityConfirmedCaseBinding binding;
@@ -107,8 +101,8 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
             }
         };
 
-        LoadVisitedRecordTableRequest loadVisitedRecordTableRequest = new LoadVisitedRecordTableRequest(responseListener);
+        LoadVisitedRecordRequest loadVisitedRecordRequest = new LoadVisitedRecordRequest(responseListener);
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        queue.add(loadVisitedRecordTableRequest);
+        queue.add(loadVisitedRecordRequest);
     }
 }
