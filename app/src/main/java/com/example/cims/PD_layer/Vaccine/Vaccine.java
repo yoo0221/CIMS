@@ -20,8 +20,8 @@ public class Vaccine {
         sideEffects.add(sideEffect);
     }
 
-    public void requestSideInfo() {
-
+    public ArrayList<SideEffect> requestSideInfo() {
+        return sideEffects;
     }
 }
 

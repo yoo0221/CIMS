@@ -19,6 +19,7 @@ public class AddSideEffectRequest extends StringRequest{
         map.put("symtom", sideEffect.getSymptom());
         map.put("treatment", sideEffect.getTreatment());
         map.put("getsym", sideEffect.getGetSymptom() + "");
+        map.put("occurprob", sideEffect.getOccurProbability() + "");
     }
 
     @Override

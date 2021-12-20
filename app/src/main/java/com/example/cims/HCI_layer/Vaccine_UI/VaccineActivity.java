@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.example.cims.HCI_layer.ConfirmedCase_UI.TabbedUI.SectionsPagerAdapter;
 import com.example.cims.HCI_layer.MenuActivity;
 import com.example.cims.MainActivity;
+import com.example.cims.PD_layer.Vaccine.Vaccine;
 import com.example.cims.R;
 import com.example.cims.databinding.ActivityConfirmedCaseBinding;
 import com.example.cims.databinding.ActivityVaccineBinding;
@@ -25,7 +26,7 @@ import androidx.viewpager.widget.ViewPager;
 
 
 public class VaccineActivity extends AppCompatActivity {
-    int vac_id;
+    private int vac_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,9 +94,6 @@ public class VaccineActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         // 아스트라제네카 Activity로 넘어갈 버튼
         Button astraZenecaButton = (Button) findViewById(R.id.buttonAstraZeneca);
         astraZenecaButton.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +106,6 @@ public class VaccineActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

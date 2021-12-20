@@ -61,6 +61,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <Button
+                android:id="@+id/btn_loadse_j"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="조회"
+                android:translationX="320sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,7 +83,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/listView_pfizer"
+        android:id="@+id/listView_astrazeneca"
         android:layout_width="match_parent"
         android:layout_marginTop="170dp"
         android:layout_height="1000dp"
