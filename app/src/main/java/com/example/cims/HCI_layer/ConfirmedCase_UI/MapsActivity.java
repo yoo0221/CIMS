@@ -14,6 +14,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.cims.databinding.ActivityMapsBinding;
 
@@ -47,14 +48,15 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng marker = null;
         // Add a marker in Sydney and move the camera
         Iterator<Place> itr = ((ConfirmedCaseActivity) getActivity()).getPlaceArrayList().iterator();
         while(itr.hasNext()) {
             Place place = itr.next();
-            marker = new LatLng(place.getLat(), place.getLng());
-            mMap.addMarker(new MarkerOptions().position(marker).title(place.getVisitRecord().getVisitedDate()+"\n"+place.getVisitRecord().getPlaceName()+"\n"+place.getVisitRecord().getAddress()));
+            LatLng marker = new LatLng(place.getLat(), place.getLng());
+            mMap.addMarker(new MarkerOptions().position(marker).title(place.getVisitRecord().getVisitedDate()).snippet(place.getVisitRecord().getPlaceName()+" / "+place.getVisitRecord().getAddress()));
         }
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(marker));
+        mMap.setMaxZoomPreference(20);
+        mMap.setMinZoomPreference(6.5f);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(36.138642, 127.987679), 6.5f));
     }
 }
