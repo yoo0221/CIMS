@@ -1,6 +1,8 @@
 package com.example.cims.HCI_layer.ConfirmedCase_UI;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -17,6 +19,8 @@ import com.example.cims.DM_layer.VolleyCallBack;
 import com.example.cims.HCI_layer.MenuActivity;
 import com.example.cims.PD_layer.ConfirmedCase.Place;
 import com.example.cims.PD_layer.ConfirmedCase.VisitedRecord.VisitRecord;
+import com.example.cims.MainActivity;
+import com.example.cims.R;
 import com.example.cims.databinding.ActivityConfirmedCaseBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -39,6 +43,26 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Toolbar toolbar = (Toolbar)findViewById(R.id.topbar_confirmedcase);
+        toolbar.setTitle(R.string.app_name);
+        setSupportActionBar(toolbar);
+/*
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true); // 뒤로가기 버튼 (왼쪽)
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
+
+        FloatingActionButton btn_home = findViewById(R.id.fab_home_confirmedcase);
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });*/
+
         binding = ActivityConfirmedCaseBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -51,7 +75,7 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
         getPlaces(new VolleyCallBack() {
             @Override
             public void onSuccess() {
-                
+
             }
         });
     }

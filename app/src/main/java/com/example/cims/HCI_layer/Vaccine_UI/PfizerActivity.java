@@ -26,9 +26,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import org.w3c.dom.Text;
+
 
 public class PfizerActivity extends AppCompatActivity {
-    LinearLayout listView;
+    TextView listView;
     Button createTextView;
     int i = 0;
 
@@ -60,14 +62,8 @@ public class PfizerActivity extends AppCompatActivity {
 
 
         // 동적 생성 관련 코드(DB에서의 데이터 불러오기를 일단은 버튼으로 표현)
-        listView = findViewById(R.id.listView);
-        createTextView = findViewById(R.id.createTextView);
-        createTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                createTextView();
-            }
-        });
+        listView = findViewById(R.id.listView_pfizer);
+
 
 
         // 화이자 Activity로 넘어갈 버튼
@@ -125,20 +121,6 @@ public class PfizerActivity extends AppCompatActivity {
 
     }
 
-    private void createTextView() {
-        TextView textViewNm = new TextView(this);
-        textViewNm.getText();
-        if (++i < 10) textViewNm.setText(i + "                     두통 및 현기증을 느낀다.");
-        else textViewNm.setText(i + "                   두통 및 현기증을 느낀다.");
-        textViewNm.setTextSize(12);
-        textViewNm.setTextColor(Color.BLACK);
-
-        textViewNm.setId(0);
-        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        param.gravity = Gravity.TOP;
-        textViewNm.setLayoutParams(param);
-        listView.addView(textViewNm);
-    }
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){

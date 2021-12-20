@@ -11,34 +11,54 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.CIMS.AppBarOverlay">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:minHeight="?actionBarSize"
-            android:padding="@dimen/appbar_padding"
-            android:text="@string/app_name"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topbar_confirmedcase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck" />
+
     </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_height="702dp"
+        android:layout_marginTop="100dp"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/main"
-        app:layout_anchor="@+id/fab_home_confirmedcase"
-        app:layout_anchorGravity="bottom|center" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:theme="@style/Theme.CIMS.AppBarOverlay">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/main"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="bottom|center" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_home_confirmedcase"
@@ -49,7 +69,10 @@
         android:layout_marginRight="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/main"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="center"
         app:srcCompat="@drawable/ic_baseline_home_24"
         tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
