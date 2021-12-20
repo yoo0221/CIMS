@@ -22,6 +22,7 @@ import com.example.cims.PD_layer.ConfirmedCase.VisitedRecord.VisitRecord;
 import com.example.cims.MainActivity;
 import com.example.cims.R;
 import com.example.cims.databinding.ActivityConfirmedCaseBinding;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
@@ -42,26 +43,6 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-/*
-        Toolbar toolbar = (Toolbar)findViewById(R.id.topbar_confirmedcase);
-        toolbar.setTitle(R.string.app_name);
-        setSupportActionBar(toolbar);
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true); // 뒤로가기 버튼 (왼쪽)
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
-
-        FloatingActionButton btn_home = findViewById(R.id.fab_home_confirmedcase);
-
-        btn_home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });*/
 
         binding = ActivityConfirmedCaseBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -78,18 +59,29 @@ public class ConfirmedCaseActivity extends AppCompatActivity {
 
             }
         });
-    }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+        MaterialToolbar toolbar = (MaterialToolbar)findViewById(R.id.topbar_confirmedcase);
+        toolbar.setNavigationOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
-                return true;
+                finish();
             }
-        }
-        return super.onOptionsItemSelected(item);
+        });
+
+        FloatingActionButton btn_home = findViewById(R.id.fab_home_confirmedcase);
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
+
 
     public ArrayList<Place> getPlaceArrayList() {
         return placeArrayList;

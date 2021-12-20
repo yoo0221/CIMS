@@ -116,32 +116,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-/*
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //return super.onCreateOptionsMenu(menu);
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.topbar_menu, menu);
-        return true;
-    }
-
-    //ToolBar에 추가된 항목의 select 이벤트를 처리하는 함수
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        //return super.onOptionsItemSelected(item);
-        switch (item.getItemId()) {
-            case R.id.menu_notice:
-                Toast.makeText(getApplicationContext(), "알람 버튼 클릭됨", Toast.LENGTH_LONG).show();
-                return true;
-        }
-        return false;
-    }
-
-*/
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
+                finish();
                 return true;
             }
         }
