@@ -56,6 +56,10 @@
         <activity android:name=".HCI_layer.InformationManagement_UI.AddSideEffectActivity" />
         <activity android:name=".HCI_layer.InformationManagement_UI.ManageInfoActivity" />
         <activity android:name=".HCI_layer.Vaccine_UI.VaccineActivity" />
+        <activity android:name=".HCI_layer.Vaccine_UI.PfizerActivity" />
+        <activity android:name=".HCI_layer.Vaccine_UI.ModernaActivity" />
+        <activity android:name=".HCI_layer.Vaccine_UI.JanssenActivity" />
+        <activity android:name=".HCI_layer.Vaccine_UI.AstraZenecaActivity" />
         <activity android:name=".HCI_layer.MenuActivity"/>
     </application>
 

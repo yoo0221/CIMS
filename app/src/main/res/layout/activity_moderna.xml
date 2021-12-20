@@ -1,40 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="vertical">
 
-    tools:context=".Fragment1"
-    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topbar_morderna"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/main"
+        app:titleTextColor="@color/white" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="모더나 부작용"
-        android:textSize="30dp"
-        android:textColor="#000000"
-        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:layout_marginTop="70dp"
+        android:layout_marginHorizontal="10dp">
 
         <Button
-            android:id="@+id/createTextView"
+            android:id="@+id/buttonPfizer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="텍스트뷰 동적생성" />
+            android:text="화이자"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/buttonModerna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="모더나"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/buttonJanssen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="얀센"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/buttonAstraZeneca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="아스트라제네카"
+            android:textSize="13sp"/>
+
     </LinearLayout>
-    <TextView
-        android:id="@+id/listview"
+
+
+
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="1000dp"
-        android:background="#0082FF"
-        android:orientation="vertical"
-        />
-</LinearLayout>
+        android:layout_height="40dp"
+        android:background="@color/main"
+        app:layout_anchor="@+id/fab_home_morderna"
+        app:layout_anchorGravity="bottom|center" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_home_morderna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/main"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
