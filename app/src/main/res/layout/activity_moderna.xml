@@ -87,6 +87,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="170dp"
         android:layout_height="1000dp"
+        android:textSize="20sp"
         android:background="#9DCFFF"
         android:orientation="vertical" />
 

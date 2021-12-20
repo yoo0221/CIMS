@@ -86,6 +86,7 @@
         android:id="@+id/listView_astrazeneca"
         android:layout_width="match_parent"
         android:layout_marginTop="170dp"
+        android:textSize="20sp"
         android:layout_height="1000dp"
         android:background="#9DCFFF"
         android:orientation="vertical" />
