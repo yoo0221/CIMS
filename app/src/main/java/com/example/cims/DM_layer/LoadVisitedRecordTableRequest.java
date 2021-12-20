@@ -20,3 +20,5 @@ public class LoadVisitedRecordTableRequest extends StringRequest{
         return map;
     }
 }
+
+

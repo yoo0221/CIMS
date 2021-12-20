@@ -4,7 +4,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
+import com.example.cims.PD_layer.ConfirmedCase.Place;
+import com.example.cims.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -13,11 +17,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.cims.databinding.ActivityMapsBinding;
 
+import java.util.Iterator;
+
 public class MapsActivity extends SupportMapFragment implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
-
+    private Button btn_loadmark;
     public MapsActivity(){
 
     }
@@ -37,13 +43,18 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        LatLng marker = null;
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        Iterator<Place> itr = ((ConfirmedCaseActivity) getActivity()).getPlaceArrayList().iterator();
+        while(itr.hasNext()) {
+            Place place = itr.next();
+            marker = new LatLng(place.getLat(), place.getLng());
+            mMap.addMarker(new MarkerOptions().position(marker).title(place.getVisitRecord().getVisitedDate()+"\n"+place.getVisitRecord().getPlaceName()+"\n"+place.getVisitRecord().getAddress()));
+        }
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(marker));
     }
 }

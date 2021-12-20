@@ -14,11 +14,6 @@ public class LoadVisitedRecordMapRequest extends StringRequest {
     public LoadVisitedRecordMapRequest(String visitedDate, String place, String address, double lat, double lng, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);
         map = new HashMap<>();
-        map.put("visitedDate", visitedDate);
-        map.put("place", place);
-        map.put("address", address);
-        map.put("lat", lat+"");
-        map.put("lng", lng+"");
     }
 
     protected Map<String, String> getParams() throws AuthFailureError {

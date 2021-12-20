@@ -29,40 +29,27 @@ import java.util.Iterator;
 
 public class TableActivity extends Fragment {
     private TextView text;
-    private ArrayList<VisitRecord> visitRecordArrayList = new ArrayList<>();
+    private Button btn_load;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_table, container, false);
 
         text = (TextView)view.findViewById(R.id.listview);
-
-        Response.Listener<String> responseListener = new Response.Listener<String>() {
+        btn_load = (Button)view.findViewById(R.id.btn_load);
+        btn_load.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(String response) {
-                try {
-                    JSONArray jsonArray = new JSONArray(response);
-                    JSONObject jsonObject;
-                    for(int i = 0;i < jsonArray.length();i++){
-                        jsonObject = (JSONObject) jsonArray.opt(i);
-                        VisitRecord visitRecord = new VisitRecord(jsonObject.getString("visitedDate"), jsonObject.getString("place"), jsonObject.getString("address"));
-                        visitRecordArrayList.add(visitRecord);
-                    }
-                    Iterator<VisitRecord> itr = visitRecordArrayList.iterator();
-                    while(itr.hasNext()) {
-                        VisitRecord visitRecord = itr.next();
-                        Toast.makeText((ConfirmedCaseActivity) getActivity(), visitRecord.getPlaceName(), Toast.LENGTH_SHORT).show();
-                        text.setText(text.getText() + visitRecord.getVisitedDate() + "   " + visitRecord.getPlaceName() + "   " + visitRecord.getAddress() + "\n");
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+            public void onClick(View view) {
+                text.setText("");
+                Iterator<Place> itr = ((ConfirmedCaseActivity) getActivity()).getPlaceArrayList().iterator();
+                while(itr.hasNext()) {
+                    Place place = itr.next();
+                    text.setText(text.getText() + place.getVisitRecord().getVisitedDate() + "   " + place.getVisitRecord().getPlaceName() + "   " + place.getVisitRecord().getAddress() + "\n");
                 }
             }
-        };
+        });
 
-        LoadVisitedRecordTableRequest loadVisitedRecordTableRequest = new LoadVisitedRecordTableRequest(responseListener);
-        RequestQueue queue = Volley.newRequestQueue((ConfirmedCaseActivity) getActivity());
-        queue.add(loadVisitedRecordTableRequest);
+        text.setText("");
 
         return view;
     }

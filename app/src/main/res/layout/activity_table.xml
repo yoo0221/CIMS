@@ -30,12 +30,13 @@
             android:layout_weight="1"
             android:text="텍스트뷰 동적생성(임시)"/>
     </LinearLayout>
-    <TextView
-        android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="1000dp"
-        android:background="#0082FF"
-        android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="887dp"
+            android:background="#0082FF"
+            android:orientation="vertical" />
     </FrameLayout>
 
     <androidx.appcompat.widget.Toolbar
@@ -56,5 +57,13 @@
         android:backgroundTint="@color/main"
         app:srcCompat="@drawable/ic_baseline_home_24"
         tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="조회"
+        android:translationX="320sp"
+        android:translationY="10sp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
